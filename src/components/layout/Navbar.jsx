@@ -1,43 +1,57 @@
 function Navabr() {
   return (
     <>
-      <header class="sticky top-0 z-50 bg-black text-white shadow">
-        <div class="mx-auto max-w-7xl flex items-center justify-between px-6 py-4">
-          <div class="font-bold text-yellow-400 text-xl">Logo</div>
-          {/* <div class="font-bold text-yellow-400 text-xl">Logo</div> */}
+      <section
+        className="relative min-h-screen bg-cover bg-center"
+        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1631173716529-fd1696a807b0?q=80&w=1112&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
+      >
+        <div className="absolute inset-0 bg-red-900/90"></div>
 
-          <nav class="hidden md:flex gap-6">
-            <a href="#" class="hover:text-yellow-400 transition">
-              Home
-            </a>
-            <a href="#" class="hover:text-yellow-400 transition">
-              Features
-            </a>
-            <a href="#" class="hover:text-yellow-400 transition">
-              Solutions
-            </a>
-            <a href="#" class="hover:text-yellow-400 transition">
-              Contect
-            </a>
-            <a href="#" class="hover:text-yellow-400 transition">
-              Get Demo
-            </a>
-          </nav>
+        <header className="relative z-10">
+          <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-6 text-white">
+            <div className="text-3xl font-bold">
+              class<span className="text-yellow-400">Sites</span>
+            </div>
 
-          <div class="hidden md:flex gap-4">
-            <button class="bg-yellow-400 text-black px-4 py-2 rounded-lg hover:scale-105 transition">
-              Login
-            </button>
+            <nav className="hidden md:flex gap-8">
+              <a href="#" className="hover:text-yellow-400">
+                Home
+              </a>
+              <a href="#" className="hover:text-yellow-400">
+                About
+              </a>
+              <a href="#" className="hover:text-yellow-400">
+                Solutions
+              </a>
+              <a href="#" className="hover:text-yellow-400">
+                Apps
+              </a>
+              <a href="#" className="hover:text-yellow-400">
+                Resources
+              </a>
+            </nav>
 
-            <button class="bg-gray-700 px-4 py-2 rounded-lg hover:scale-105 transition">
-              Sign Up
+            <button className="border border-white px-5 py-2 rounded-lg hover:bg-white hover:text-red-900 transition">
+               Free Demo
             </button>
           </div>
+        </header>
 
-          <button class="md:hidden text-2xl">☰</button>
+        <div className="relative z-10 flex items-center justify-center min-h-screen text-center text-white">
+          <div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              School Portal App
+            </h1>
+
+            <p className="text-yellow-400 text-lg md:text-2xl max-w-3xl mx-auto">
+              Manage your school portal with Class ON App – your one-stop
+              solution for efficient management
+            </p>
+          </div>
         </div>
-      </header>
+      </section>
     </>
   );
 }
+
 export default Navabr;
