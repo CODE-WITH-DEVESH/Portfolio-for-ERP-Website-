@@ -10,7 +10,7 @@ function Navabr() {
         <header className="relative z-10">
           <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-6 text-white">
             <div className="text-3xl font-bold">
-              class<span className="text-yellow-400">ON</span>
+              classes<span className="text-yellow-400">Sites</span>
             </div>
 
             <nav className="hidden md:flex gap-8">
@@ -22,7 +22,7 @@ function Navabr() {
             </nav>
 
             <button className="border border-white px-5 py-2 rounded-lg hover:bg-white hover:text-red-900 transition">
-              Request Free Demo
+              Add Free Demo
             </button>
           </div>
         </header>
