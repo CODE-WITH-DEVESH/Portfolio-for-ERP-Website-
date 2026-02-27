@@ -1,6 +1,9 @@
 
 import './App.css'
 import Navbar from './components/layout/Navbar'
+import AppCardsSection from './sections/AppCardsSection/AppCardSection'
+import BenefitsSection from './sections/BenefitsSection/BenefitsSection'
+import Hero from './sections/Hero/Hero'
 
 function App() {
   
@@ -8,10 +11,9 @@ function App() {
   return (
     <>
     <Navbar/>
-     <h1>Smart Page</h1>
-     <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+    <Hero/>
+    <BenefitsSection/>
+    <AppCardsSection/>
     </>
   )
 }

@@ -1,46 +1,86 @@
-function Navabr() {
+import { useState } from "react";
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <>
-      <section
-        className="relative min-h-screen bg-cover bg-center"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')" }}
-      >
-        <div className="absolute inset-0 bg-red-900/90"></div>
+    <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md shadow-md border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex items-center justify-between h-16">
+          <div className="text-2xl font-bold text-gray-800">
+            Class<span className="text-indigo-600">Sites</span>
+          </div>
 
-        <header className="relative z-10">
-          <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-6 text-white">
-            <div className="text-3xl font-bold">
-              classes<span className="text-yellow-400">Sites</span>
-            </div>
+          <nav className="hidden md:flex items-center gap-8 text-gray-600 font-medium">
+            <a href="#" className="hover:text-indigo-600 transition">
+              Overview
+            </a>
 
-            <nav className="hidden md:flex gap-8">
-              <a href="#" className="hover:text-yellow-400">Home</a>
-              <a href="#" className="hover:text-yellow-400">About</a>
-              <a href="#" className="hover:text-yellow-400">Solutions</a>
-              <a href="#" className="hover:text-yellow-400">Apps</a>
-              <a href="#" className="hover:text-yellow-400">Resources</a>
-            </nav>
+            <a href="#" className="hover:text-indigo-600 transition">
+              Who We are
+            </a>
 
-            <button className="border border-white px-5 py-2 rounded-lg hover:bg-white hover:text-red-900 transition">
-              Add Free Demo
+            <a href="#" className="hover:text-indigo-600 transition">
+              What We Offer
+            </a>
+
+            <a href="#" className="hover:text-indigo-600 transition">
+              Our Platfrom
+            </a>
+
+            <a href="#" className="hover:text-indigo-600 transition">
+              Knowledge Hub
+            </a>
+          </nav>
+
+          <div className="hidden md:flex items-center gap-4">
+            <button className="px-4 py-2 text-gray-600 hover:text-indigo-600 transition">
+              Login
+            </button>
+
+            <button className="px-5 py-2 bg-indigo-600 text-white rounded-lg shadow-lg shadow-indigo-500/30 hover:bg-indigo-700 transition">
+              Get a Free Demo
             </button>
           </div>
-        </header>
 
-        <div className="relative z-10 flex items-center justify-center min-h-screen text-center text-white">
-          <div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              School Portal App
-            </h1>
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-gray-700"
+          >
+            {isOpen ? "✕" : "☰"}
+          </button>
+        </div>
+      </div>
 
-            <p className="text-yellow-400 text-lg md:text-2xl max-w-3xl mx-auto">
-              Manage your school portal with Class ON App – your one-stop solution for efficient management
-            </p>
+      {isOpen && (
+        <div className="md:hidden bg-white shadow-lg border-t border-gray-200">
+          <div className="flex flex-col px-6 py-4 gap-4 text-gray-700 font-medium">
+            <a href="#" className="hover:text-indigo-600 transition">
+              Overview
+            </a>
+
+            <a href="#" className="hover:text-indigo-600 transition">
+              Who We are
+            </a>
+
+            <a href="#" className="hover:text-indigo-600 transition">
+              What We Offer
+            </a>
+
+            <a href="#" className="hover:text-indigo-600 transition">
+              Our Platfrom
+            </a>
+
+            <a href="#" className="hover:text-indigo-600 transition">
+              Knowledge Hub
+            </a>
+
+            <button className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded-lg">
+              Get a Free Demo
+            </button>
           </div>
         </div>
-      </section>
-    </>
+      )}
+    </header>
   );
 }
-
-export default Navabr;
