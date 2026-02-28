@@ -16,7 +16,7 @@ export default function Hero() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <button className="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-lg shadow-indigo-500/30 hover:bg-indigo-700 transition">
+              <button className="px-6 py-3 bg-[#845EC2] text-white rounded-lg shadow-lg shadow-indigo-500/30 hover:bg-indigo-700 transition">
                 Check the Benefits
               </button>
 

@@ -12,7 +12,7 @@ export default function AppCardsSection() {
           </p>
         </div>
 <div className="grid gap-12 md:grid-cols-3">
-         
+        
           <div className="group text-center">
             <div className="overflow-hidden rounded-2xl shadow-lg transition duration-500 group-hover:shadow-blue-500/30">
               <img
